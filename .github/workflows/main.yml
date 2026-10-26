@@ -25,9 +25,8 @@ jobs:
         with:
           gradle-version: '8.9'
 
-      - name: Verify Gradle project
-        run: gradle projects
-
+      - name: Verify Android tasks
+  run: gradle :app:tasks --all
       - name: Build debug APK
         run: gradle :app:assembleDebug
 
